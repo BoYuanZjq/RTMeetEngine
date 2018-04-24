@@ -80,8 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/BoYuanZjq/RTMeetEngine", :tag => "#{s.version}",
-                     :submodules => true }
+  s.source       = { :git => "https://github.com/BoYuanZjq/RTMeetEngine.git", :tag => "#{s.version}",:submodules => true }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
