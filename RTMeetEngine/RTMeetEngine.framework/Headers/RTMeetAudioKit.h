@@ -76,6 +76,22 @@
 
 - (int)sendUserMessage:(NSString*)strUserName andUserHeader:(NSString*)strUserHeaderUrl andContent:(NSString*)strContent;
 
+/**
+ 设置某路视频广播
+ 
+ @param bEnable 广播与取消广播
+ @param strRTCPeerId 视频流Id
+ */
+- (void)setRTCBroadCast:(BOOL)bEnable andRTCPeerId:(NSString*)strRTCPeerId;
+
+/**
+ 授课1v1模式与否
+ 
+ @param bEnable 1v1与取消1v1
+ @param strRTCPeerId 视频流Id
+ */
+- (void)setRTCTalkOnly:(BOOL)bEnable andRTCPeerId:(NSString*)strRTCPeerId;
+
 #pragma mark - 白板功能模块
 /**
  设置白板相关回调

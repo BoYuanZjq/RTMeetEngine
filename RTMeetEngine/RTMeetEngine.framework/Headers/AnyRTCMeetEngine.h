@@ -32,7 +32,7 @@
  */
 + (void)configServerForPriCloud:(NSString*)strAddress andPort:(int)nPort;
 /**
- 获取 RTMPC SDK 版本号
+ 获取 RTMeeting SDK 版本号
  
  @return 版本号
  */

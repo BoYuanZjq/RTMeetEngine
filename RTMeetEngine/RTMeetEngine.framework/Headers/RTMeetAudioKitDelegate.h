@@ -98,7 +98,7 @@
 - (void)onRTCHosterOnLine:(NSString*)strRTCPeerId withUserId:(NSString*)strUserId withUserData:(NSString*)strUserData;
 
 /**
- 主持人上线（只有主持模式下的游客身份登录才有用）
+ 主持人下线（只有主持模式下的游客身份登录才有用）
  
  @param strRTCPeerId RTC服务生成的标识Id (用于标识与会者，每次加入会议随机生成)；
  */
