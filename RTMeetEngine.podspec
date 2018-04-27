@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RTMeetEngine"
-  s.version      = "0.0.3"
+  s.version      = "0.0.5"
   s.summary      = "AnyRTC视频会议SDK"
 
   # This description is used to generate tags and improve search results.
@@ -121,7 +121,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks =  "AVFoundation","AudioToolbox","VideoToolbox","CoreMedia","OpenGLES"
+  # s.frameworks =  "AVFoundation","AudioToolbox","VideoToolbox","CoreMedia","OpenGLES"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
