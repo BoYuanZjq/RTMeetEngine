@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "RTCCommon.h"
 
+typedef NS_ENUM(NSInteger,RTMeetCameraType) {
+    RTMeetCameraTypeNomal = 0,      // 正常的相机模式,系统自带的（效率高）
+    RTMeetCameraTypeBeauty         // 美颜相机模式
+};
+
 typedef NS_ENUM(NSInteger,AnyMeetingType) {
     AnyMeetingTypeNomal = 0, //一般模式：大家进入会议互相观看
     AnyMeetingTypeHoster = 1//主持模式：主持人进入，可以看到所有人，其他人员只看到主持人
@@ -51,5 +56,11 @@ typedef NS_ENUM(NSInteger,AnyMeetingType) {
  设置会议模式：默认为：AnyMeetingTypeNomal
  */
 @property (nonatomic, assign) AnyMeetingType meetingType;
+
+/**
+ 设置相机类型
+ 说明：根据自己的需求，选择相应的相机类型;默认RTMeetCameraTypeNomal
+ */
+@property (nonatomic, nonatomic) RTMeetCameraType cameraType;
 
 @end
