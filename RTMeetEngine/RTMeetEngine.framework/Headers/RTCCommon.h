@@ -139,6 +139,18 @@ typedef enum {
 }RTMPCVideoMode;
 
 typedef enum {
+    AnyRTCVideoQuality_Low1 = 0,      // 320*240 - 128kbps
+    AnyRTCVideoQuality_Low2,          // 352*288 - 256kbps
+    AnyRTCVideoQuality_Low3,          // 352*288 - 384kbps
+    AnyRTCVideoQuality_Medium1,       // 640*480 - 384kbps
+    AnyRTCVideoQuality_Medium2,       // 640*480 - 512kbps
+    AnyRTCVideoQuality_Medium3,       // 640*480 - 768kbps
+    AnyRTCVideoQuality_Height1,       // 960*540 - 768kbps
+    AnyRTCVideoQuality_Height2,       // 1280*720 - 1024kbps
+    AnyRTCVideoQuality_Height3,       // 1920*1080 - 2048kbps
+}AnyRTCVideoQualityModel;
+
+typedef enum {
     RTMPC_SCRN_Portrait = 0,
     RTMPC_SCRN_LandscapeRight,
     RTMPC_SCRN_PortraitUpsideDown,
