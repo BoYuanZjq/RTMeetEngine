@@ -92,11 +92,11 @@
 - (void)setFontCameraMirrorEnable:(BOOL)bEnable;
 
 /**
- 开启美颜:使用系统美颜，默认是关闭的
+ 设置滤镜（使用美颜相机模式，默认开启美颜）
  
- @param bEnable YES/NO:美颜/不美颜(配置美颜相机才有该功能)
+ @param eFilter 滤镜模式
  */
-- (void)setBeautyEnable:(BOOL) bEnable;
+- (void)setCameraFilter:(AnyCameraDeviceFilter)eFilter;
 
 #pragma mark RTC function for line
 /**

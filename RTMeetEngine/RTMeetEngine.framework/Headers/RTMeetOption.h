@@ -34,10 +34,20 @@ typedef NS_ENUM(NSInteger,AnyMeetingType) {
 @property (nonatomic, assign) BOOL isFont;
 
 /**
- 设置视频分辨率
- 说明：默认为：RTCMeet_Videos_SD
+ 设置推流视频质量
+ AnyRTCVideoQuality_Low1 = 0,      // 320*240 - 128kbps
+ AnyRTCVideoQuality_Low2,          // 352*288 - 256kbps
+ AnyRTCVideoQuality_Low3,          // 352*288 - 384kbps
+ AnyRTCVideoQuality_Medium1,       // 640*480 - 384kbps
+ AnyRTCVideoQuality_Medium2,       // 640*480 - 512kbps
+ AnyRTCVideoQuality_Medium3,       // 640*480 - 768kbps
+ AnyRTCVideoQuality_Height1,       // 960*540 - 768kbps
+ AnyRTCVideoQuality_Height2,       // 1280*720 - 1024kbps
+ AnyRTCVideoQuality_Height3,       // 1920*1080 - 2048kbps
+ 
+ 说明:　默认：AnyRTCVideoQuality_Medium2
  */
-@property (nonatomic, assign) RTCMeetVideosMode videoMode;
+@property (nonatomic, assign) AnyRTCVideoQualityModel videoMode;
 
 /**
  视频方向：默认：RTC_SCRN_Portrait竖屏
