@@ -50,6 +50,20 @@
 - (void)setLocalVideoEnable:(bool)bEnable;
 
 /**
+ 获取本地音频传输是否打开
+
+ @return 音频传输与否
+ */
+- (BOOL)localAudioEnabled;
+
+/**
+ 获取本地视频传输是否打开
+
+ @return 视频传输与否
+ */
+- (BOOL)localVideoEnabled;
+
+/**
  切换前后摄像头
  说明:切换本地前后摄像头。
  */
