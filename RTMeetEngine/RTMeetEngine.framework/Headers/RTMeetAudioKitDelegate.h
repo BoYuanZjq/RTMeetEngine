@@ -12,7 +12,8 @@
 #import <UIKit/UIKit.h>
 
 @protocol RTMeetAudioKitDelegate <NSObject>
-@required
+
+@optional
 /**
  加入会议成功的回调
  
@@ -76,7 +77,6 @@
  */
 -(void)onRTCAudioActive:(NSString*)strRTCPeerId withUserId:(NSString *)strUserId withAudioLevel:(int)nLevel withShowTime:(int)nTime;
 
-@optional
 /**
  网络状态
  

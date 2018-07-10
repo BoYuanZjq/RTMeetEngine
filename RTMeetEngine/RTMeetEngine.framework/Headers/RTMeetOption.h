@@ -77,4 +77,9 @@ typedef NS_ENUM(NSInteger,AnyMeetingType) {
  */
 @property (nonatomic, nonatomic) RTMeetCameraType cameraType;
 
+/**
+ 视频会议最大人数(默认为4人，根据自己需求更改，建议不要超过9人)
+ 说明：该参数会在joinRTC的时候告诉服务最大支持人数：对应字段：MaxJoiner,请保持android、iOS、以及其他端保持统一。
+ */
+@property (nonatomic, assign) int maxNum;
 @end
