@@ -206,6 +206,13 @@ typedef NSView VIEW_CLASS;
  */
 - (BOOL)networkStatusEnabled;
 
+/**
+ 网络检测、服务链接状态(加入房间成功后才能调用)
+ 说明：如果本地网络状态发生变化，开发者调用该接口：然后等待服务返回当前链接状态：onRTCCheckConnectionRealtime
+ @return 返回check成功与失败
+ */
+- (BOOL)doCheckConnection;
+
 #pragma mark - 白板功能模块
 
 /**

@@ -63,8 +63,26 @@
  */
 - (void)leaveRTC;
 #pragma mark - 视频流信息监测
+/**
+ 设置视频网络状态是否打开
+ 
+ @param bEnable YES:打开;NO:关闭
+ 说明:默认关闭
+ */
 - (void)setNetworkStatus:(BOOL)bEnable;
+
+/**
+ 获取当前视频网络状态是否打开
+ 
+ @return 获取网络视频状态
+ */
 - (BOOL)networkStatusEnabled;
+
+/**
+ 网络检测、服务链接状态(加入房间成功后才能调用)
+ 说明：如果本地网络状态发生变化，开发者调用该接口：然后等待服务返回当前链接状态：onRTCCheckConnectionRealtime
+ */
+- (void)doCheckConnection;
 
 #pragma mark - 消息
 /**
