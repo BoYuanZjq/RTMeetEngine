@@ -44,6 +44,13 @@
  说明：默认打开
  */
 - (void)setAudioActiveCheck:(bool)bOn;
+
+/**
+ 重置音频录音和播放
+ 说明:使用AVplayer播放后调用该方法
+ */
+- (void)doRestartAudioRecord;
+
 #pragma mark RTC function for line
 
 /**

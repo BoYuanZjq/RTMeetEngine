@@ -105,14 +105,18 @@ typedef NSView VIEW_CLASS;
  */
 - (void)updateLocalVideoRenderModel:(AnyRTCVideoRenderMode)eVideoRenderMode;
 
-
 /**
- 设置前置摄像头镜像是否打开
+ 重置音频录音和播放
+ 说明:使用AVplayer播放后调用该方法
+ */
+- (void)doRestartAudioRecord;
+/**
+ 设置本地前置摄像头镜像是否打开
  
  @param bEnable YES为打开，NO为关闭
- 说明：默认打开(目前只支持美颜相机)
+ @return 镜像成功与否
  */
-- (void)setFontCameraMirrorEnable:(BOOL)bEnable;
+- (BOOL)setFontCameraMirrorEnable:(BOOL)bEnable;
 
 /**
  设置滤镜（默认开启美颜）
