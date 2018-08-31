@@ -91,7 +91,6 @@ typedef NSView VIEW_CLASS;
  设置本地视频采集窗口
  
  @param render 视频显示对象
- @param bFront 是否用前置摄像头
  说明：该方法用于本地视频采集。
  */
 
@@ -133,7 +132,7 @@ typedef NSView VIEW_CLASS;
  @param strAnyRTCId strAnyRTCId 会议号（可以在AnyRTC 平台获得，也可以根据自己平台，分配唯一的一个ID号）
  @param isHoster 是否是主持人
  @param strUserId 播在开发者自己平台的id，可选
- @param strUserData 播在开发者自己平台的相关信息（昵称，头像等），可选。(限制512字节)
+ @param strUserData 播在开发者自己平台的相关信息（昵称，头像等）还可以加入字段来限制会议人数：MaxJoiner，可选。(限制512字节)
  @return 加入会议成功或者失败
  */
 - (BOOL)joinRTC:(NSString*)strAnyRTCId andIsHoster:(BOOL)isHoster andUserId:(NSString*)strUserId andUserData:(NSString*)strUserData;
