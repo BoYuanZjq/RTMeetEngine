@@ -38,7 +38,7 @@ typedef NS_ENUM(NSInteger,ARMeetCode) {
     ARMeet_SERVER_NOT_OPEN = 208,      // 服务未开通
     ARMeet_ALLOC_NO_RES = 209,         // 没有服务资源
     ARMeet_SERVER_NO_SURPPOAR = 210,   // 不支持的服务
-    ARMeet_FORCE_EXIT = 211,           // 强制离开
+    ARMeet_CHECK_USER_TOKEN_ERR = 211, // 验证用户的token发生错误
     ARMeet_AUTH_TIMEOUT = 212,         // 验证超时
     ARMeet_NEED_VERTIFY_TOKEN = 213,   // 需要验证userToken
     ARMeet_WEB_DOMIAN_ERROR = 214,     // Web应用的域名验证失败
@@ -69,5 +69,25 @@ typedef NS_ENUM(NSInteger,ARZoomType){
     ARZoomTypeSingle = 1, // 单显示模式:语音激励模式
     ARZoomTypeDriver = 2, // 驾驶模式:只接受音频:此时自己设置音视频是否传输
 };
+
+/** Audio output routing. */
+typedef NS_ENUM(NSInteger, ARAudioOutputRouting) {
+    /** Default. */
+    ARAudioOutputRoutingDefault = -1,
+    /** Headset.*/
+    ARAudioOutputRoutingHeadset = 0,
+    /** Earpiece. */
+    ARAudioOutputRoutingEarpiece = 1,
+    /** Headset with no microphone. */
+    ARAudioOutputRoutingHeadsetNoMic = 2,
+    /** Speakerphone. */
+    ARAudioOutputRoutingSpeakerphone = 3,
+    /** Loudspeaker. */
+    ARAudioOutputRoutingLoudspeaker = 4,
+    /** Bluetooth headset. */
+    ARAudioOutputRoutingHeadsetBluetooth = 5
+};
+
+
 
 #endif /* ARMeetEnum_h */

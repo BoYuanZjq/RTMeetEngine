@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  说明：建议在AppDelegate.m调用。
  */
 + (void)initEngine:(NSString *)appId token:(NSString *)token;
+
 /**
  配置私有云
  

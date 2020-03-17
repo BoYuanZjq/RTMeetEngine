@@ -118,11 +118,11 @@
 /**
 其他与会者对音视频的操作
 
-@param peerId RTC服务生成的标识Id (用于标识与会者，每次加入会议随机生成)
+@param pubId RTC服务生成流的Id (用于标识与会者发布的流)
 @param audio YES为打开音频，NO为关闭音频
 @param video YES为打开视频，NO为关闭视频
 */
-- (void)onRTCRemoteAVStatus:(NSString *)peerId audio:(BOOL)audio video:(BOOL)video;
+- (void)onRTCRemoteAVStatus:(NSString *)pubId audio:(BOOL)audio video:(BOOL)video;
 
 /**
  别人对自己音视频的操作
@@ -165,17 +165,23 @@
 - (void)onRTCRemoteVideoViewChanged:(CGSize)size pubId:(NSString *)pubId;
 
 #pragma mark - 网络状态和音频检测
+/**
+ 语音路由已改变
+
+ @param routing 设置语音路由: ARAudioOutputRouting
+ */
+- (void)onRTCAudioRouteChanged:(ARAudioOutputRouting)routing;
 
 /**
  其他与会者音频检测回调
  
- @param peerId RTC服务生成的与会者标识Id（用于标识与会者用户，每次随机生成）
+ @param pubId RTC服务生成流的Id (用于标识与会者发布的流)
  @param userId 开发者自己平台的用户Id
  @param level 音频大小（0~100）
  @param time 音频检测在nTime毫秒内不会再回调该方法（单位：毫秒）
  说明：与会者关闭音频后（setLocalAudioEnable为NO）,该回调将不再回调。对方关闭音频检测后（setAudioActiveCheck为NO）,该回调也将不再回调。
  */
-- (void)onRTCRemoteAudioActive:(NSString *)peerId userId:(NSString *)userId audioLevel:(int)level showTime:(int)time;
+- (void)onRTCRemoteAudioActive:(NSString *)pubId userId:(NSString *)userId audioLevel:(int)level showTime:(int)time;
 
 /**
  本地音频检测回调
@@ -189,13 +195,13 @@
 /**
  其他与会者网络质量回调
 
- @param peerId RTC服务生成的与会者标识Id（用于标识与会者用户，每次随机生成）
+ @param pubId RTC服务生成流的Id (用于标识与会者发布的流)
  @param userId 用户平台Id
  @param netSpeed 网络上行
  @param packetLost 丢包率
  @param netQuality 网络质量
  */
-- (void)onRTCRemoteNetworkStatus:(NSString *)peerId userId:(NSString *)userId netSpeed:(int)netSpeed packetLost:(int)packetLost netQuality:(ARNetQuality)netQuality;
+- (void)onRTCRemoteNetworkStatus:(NSString *)pubId userId:(NSString *)userId netSpeed:(int)netSpeed packetLost:(int)packetLost netQuality:(ARNetQuality)netQuality;
 
 /**
  本地网络质量回调

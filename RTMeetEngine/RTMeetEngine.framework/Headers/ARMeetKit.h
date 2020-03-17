@@ -122,12 +122,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  设置远端音视频是否传输
  
- @param peerId RTC服务生成的标识Id
+ @param pubId RTC服务生成流的ID (用于标识与会者发布的流)
  @param audio YES传输音频，NO不传输音频
  @param video YES传输视频，NO不传输视频
  @return 操作是否成功
  */
-- (BOOL)setRemoteAVEnable:(NSString *)peerId audio:(BOOL)audio video:(BOOL)video;
+- (BOOL)setRemoteAVEnable:(NSString *)pubId audio:(BOOL)audio video:(BOOL)video;
 
 /**
  本地是否接收远程的视频
@@ -148,14 +148,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)muteRemoteAudioStream:(BOOL)mute pubId:(NSString *)pubId;
 
-
-/**
- 截图功能
- 
- @param userId 用户Id
- @param block 数据回调
- */
-- (void)snapPicture:(NSString*)userId complete:(ScreenshotsBlock)block;
 
 #pragma mark - 外部塞流
 
@@ -363,7 +355,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)setZoomPageIndex:(int)index showNum:(int)showNum;
 
-#pragma mark -
+#pragma mark - 录像截图
 
 /**
  开始录制
@@ -384,6 +376,14 @@ NS_ASSUME_NONNULL_BEGIN
  @return 0：成功，-1：失败
  */
 - (int)stopRecording;
+
+/**
+ 截图功能
+ 
+ @param userId 用户Id
+ @param block 数据回调
+ */
+- (void)snapPicture:(NSString*)userId complete:(ScreenshotsBlock)block;
 
 @end
 

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RTMeetEngine"
-  s.version      = "3.0.2"
+  s.version      = "3.0.3"
   s.summary      = "AnyRTC视频会议SDK"
 
   # This description is used to generate tags and improve search results.
