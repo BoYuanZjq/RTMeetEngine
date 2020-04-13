@@ -286,13 +286,22 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)audioDataCallBackEnabled;
 
 /**
- 重新采样率
+ 本地音频重新采样输出
 
  @param sampleRate 采样率，仅支持 8000,16000,32000,44100,48000
  @param channel 频道数量
  @return YES:成功;NO:失败
  */
 - (BOOL)resamplerLocalAudio:(int)sampleRate channel:(int)channel;
+
+/**
+远端音频重新采样输出
+
+@param sampleRate 采样率，仅支持 8000,16000,32000,44100,48000
+@param channel 频道数量
+@return YES:成功;NO:失败
+*/
+- (BOOL)resamplerRemoteAudio:(int)sampleRate channel:(int)channel;
 
 /**
  获取人员列表
